@@ -1,9 +1,13 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+import web3 from "./web3";
 
 class App extends React.Component {
   render() {
+    web3.eth.getAccounts()
+      .then(console.log);
+
     return (
       <div className="App">
         <header className="App-header">
@@ -24,4 +28,5 @@ class App extends React.Component {
     );
   }
 }
+
 export default App;
